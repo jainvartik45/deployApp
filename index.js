@@ -6,11 +6,12 @@ import cors from 'cors'
 import postRouter from './routes/posts.js'
 import userRouter from './routes/users.js'
 import path from 'path'
-const __dirname = path.resolve(path.dirname('')); 
+import morgan from 'morgan'
 
 const app = express();
 
 app.use(express.static(path.join(__dirname,'./client/build')))
+app.use(morgan("dev"));
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
