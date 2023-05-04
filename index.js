@@ -9,6 +9,7 @@ import path from 'path'
 import morgan from 'morgan'
 
 const app = express();
+const __dirname = path.resolve(path.dirname('')); 
 
 app.use(express.static(path.join(__dirname,'./client/build')))
 app.use(morgan("dev"));
