@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname,'./client/build')))
 app.use(morgan("dev"));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
