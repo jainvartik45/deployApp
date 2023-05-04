@@ -6,6 +6,7 @@ import cors from 'cors'
 import postRouter from './routes/posts.js'
 import userRouter from './routes/users.js'
 import path from 'path'
+const __dirname = path.resolve(path.dirname('')); 
 
 const app = express();
 
